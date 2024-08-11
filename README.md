@@ -17,23 +17,27 @@ import * as ec2 from "aws-cdk-lib/aws-ec2";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import { calm3chat22b } from "aws-cdk-neuronx-models";
 
-const vpc = new ec2.Vpc(stack, "Vpc", {
+const vpc = new ec2.Vpc(this, "Vpc", {
   natGateways: 1,
 });
-const bucket = new s3.Bucket(stack, "Bucket", {
+const bucket = new s3.Bucket(this, "Bucket", {
   autoDeleteObjects: true,
   removalPolicy: RemovalPolicy.DESTROY,
 });
-const lowCost = new calm3chat22b.SageMakerRealtimeInference(stack, "LowCost", {
-  bucket,
-  compileVpc: vpc,
-  instanceTypeStrategy: calm3chat22b.InstanceTypeStrategy.lowCost,
-});
+const lowCost = new calm3chat22b.SageMakerRealtimeInference(
+  this,
+  "RealtimeInference",
+  {
+    bucket,
+    compileVpc: vpc,
+    instanceTypeStrategy: calm3chat22b.InstanceTypeStrategy.lowCost,
+  },
+);
 ```
 
 ## Instance Type and workers every strategies
 
-| model                     | strategy         | instance type    | number of workers | number of positions | quantization |
-| ------------------------- | ---------------- | ---------------- | ----------------- | ------------------- | ------------ |
-| cyberagent/calm3-22b-chat | LOW_COST         | ml.trn1.2xlarge  | 1                 | 1024                | s8           |
-| cyberagent/calm3-22b-chat | HIGH_PERFORMANCE | ml.inf2.24xlarge | 3                 | 4096                |
+| model                     | strategy        | instance type    | number of workers | number of positions | quantization |
+| ------------------------- | --------------- | ---------------- | ----------------- | ------------------- | ------------ |
+| cyberagent/calm3-22b-chat | lowCost         | ml.trn1.2xlarge  | 1                 | 1024                | s8           |
+| cyberagent/calm3-22b-chat | highPerformance | ml.inf2.24xlarge | 3                 | 4096                |
