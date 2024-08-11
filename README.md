@@ -12,6 +12,25 @@ npm i aws-cdk-neuronx-models
 
 The following code is an example of defining `cyberagent/calm3-22b-chat`. The names of the constructs differ depending on each model, but they are basically the same.
 
+```ts
+import * as ec2 from "aws-cdk-lib/aws-ec2";
+import * as s3 from "aws-cdk-lib/aws-s3";
+import { calm3chat22b } from "aws-cdk-neuronx-models";
+
+const vpc = new ec2.Vpc(stack, "Vpc", {
+  natGateways: 1,
+});
+const bucket = new s3.Bucket(stack, "Bucket", {
+  autoDeleteObjects: true,
+  removalPolicy: RemovalPolicy.DESTROY,
+});
+const lowCost = new calm3chat22b.SageMakerRealtimeInference(stack, "LowCost", {
+  bucket,
+  compileVpc: vpc,
+  instanceTypeStrategy: calm3chat22b.InstanceTypeStrategy.lowCost,
+});
+```
+
 ## Instance Type and workers every strategies
 
 | model                     | strategy         | instance type    | number of workers | number of positions | quantization |

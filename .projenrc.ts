@@ -1,4 +1,4 @@
-import { awscdk } from "projen";
+import { awscdk, ReleasableCommits } from "projen";
 const cdkVersion = "2.151.0";
 const project = new awscdk.AwsCdkConstructLibrary({
   author: "WinterYukky",
@@ -23,6 +23,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
     `@aws-cdk/integ-tests-alpha@${cdkVersion}-alpha.0`,
     "aws-cdk-neuronx-patterns@0.0.10",
   ] /* Build dependencies for this module. */,
+  releasableCommits: ReleasableCommits.ofType([
+    "feat",
+    "fix",
+    "revert",
+    "Revert",
+  ]),
   packageName: "aws-cdk-neuronx-models" /* The "name" in package.json. */,
 });
 project.addTask("integ", {

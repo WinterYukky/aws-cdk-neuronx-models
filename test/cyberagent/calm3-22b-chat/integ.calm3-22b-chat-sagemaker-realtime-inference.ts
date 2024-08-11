@@ -1,6 +1,6 @@
 import { ExpectedResult, IntegTest } from "@aws-cdk/integ-tests-alpha";
 import { App, RemovalPolicy, Stack } from "aws-cdk-lib";
-import { Vpc } from "aws-cdk-lib/aws-ec2";
+import * as ec2 from "aws-cdk-lib/aws-ec2";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import { calm3chat22b } from "../../../src";
 
@@ -9,7 +9,7 @@ const stack = new Stack(
   app,
   "IntegCalm3Chat22bSageMakerRealtimeInferenceStack",
 );
-const vpc = new Vpc(stack, "Vpc", {
+const vpc = new ec2.Vpc(stack, "Vpc", {
   natGateways: 1,
 });
 const bucket = new s3.Bucket(stack, "Bucket", {
