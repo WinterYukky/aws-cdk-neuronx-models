@@ -1,5 +1,1 @@
-export class Hello {
-  public sayHello() {
-    return 'hello, world!';
-  }
-}
+export * as calm3chat22b from "./cyberagent/calm3-22b-chat";

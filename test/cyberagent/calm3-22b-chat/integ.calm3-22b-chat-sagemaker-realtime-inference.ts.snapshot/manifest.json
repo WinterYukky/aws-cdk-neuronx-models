@@ -1,0 +1,912 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "IntegCalm3Chat22bSageMakerRealtimeInferenceStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "IntegCalm3Chat22bSageMakerRealtimeInferenceStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "IntegCalm3Chat22bSageMakerRealtimeInferenceStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "IntegCalm3Chat22bSageMakerRealtimeInferenceStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/2156b3ced549e5c2eb58c1216941fcebcd4f059213a94823cb1e854a9bee801e.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "IntegCalm3Chat22bSageMakerRealtimeInferenceStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "IntegCalm3Chat22bSageMakerRealtimeInferenceStack.assets"
+      ],
+      "metadata": {
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Vpc8378EB38"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1Subnet5C2D37C4"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1RouteTable6C95E38E"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1RouteTableAssociation97140677"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1DefaultRoute3DA9E72A"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1EIPD7E02669"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1NATGateway4D7517AA"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2Subnet691E08A3"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2RouteTable94F7E489"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2RouteTableAssociationDD5762D8"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2DefaultRoute97F91067"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1Subnet536B997A"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1RouteTableB2C5B500"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1RouteTableAssociation70C59FA6"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1DefaultRouteBE02A9ED"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2Subnet3788AAA1"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2RouteTableA678073B"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2RouteTableAssociationA89CAD56"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2DefaultRoute060D2087"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIGWD7BA715C"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcVPCGWBF912B6E"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Vpc/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcRestrictDefaultSecurityGroupCustomResourceC73DA2BE"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LatestNodeRuntimeMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LatestNodeRuntimeMap"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Bucket83908E77"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketPolicyE9A3008A"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Bucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketAutoDeleteObjectsCustomResourceBAFD23C2"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/LaunchTemplate/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileLaunchTemplate18280961"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/MachinImage/NeuronxAmiProvider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileMachinImageNeuronxAmiProviderframeworkonEventServiceRoleF7D9ED8F"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/MachinImage/NeuronxAmiProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileMachinImageNeuronxAmiProviderframeworkonEventServiceRoleDefaultPolicy85FA09A1"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/MachinImage/NeuronxAmiProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileMachinImageNeuronxAmiProviderframeworkonEventBED44C87"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/MachinImage/Image.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileMachinImageImageParameter337DF9DB"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/MachinImage/NeuronxAmi/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileMachinImageNeuronxAmiA4895989"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/ComputeEnvironment/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileComputeEnvironmentSecurityGroup545D8E84"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/ComputeEnvironment/InstanceProfileRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileComputeEnvironmentInstanceProfileRole54CBAE79"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/ComputeEnvironment/InstanceProfileRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileComputeEnvironmentInstanceProfileRoleDefaultPolicy9B673626"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/ComputeEnvironment/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileComputeEnvironmentInstanceProfile28246206"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/ComputeEnvironment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileComputeEnvironment98C47BC9"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/JobQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileJobQueue34F1C1A1"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/ContainerDefinition/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileContainerDefinitionExecutionRoleF1D82BB5"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/ContainerDefinition/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileContainerDefinitionExecutionRoleDefaultPolicy8495394D"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/JobDefinition/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileJobDefinitionAE5E9017"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderframeworkonEventServiceRoleBB99925A"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderframeworkonEventServiceRoleDefaultPolicyA156A755"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderframeworkonEventDA2E8A5A"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/framework-isComplete/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderframeworkisCompleteServiceRoleFBEF59A0"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/framework-isComplete/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderframeworkisCompleteServiceRoleDefaultPolicy48B57467"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderframeworkisCompleteA50E2628"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/framework-onTimeout/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderframeworkonTimeoutServiceRole15C30A7A"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderframeworkonTimeoutServiceRoleDefaultPolicy59E0B302"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/framework-onTimeout/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderframeworkonTimeout96223A73"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/waiter-state-machine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderwaiterstatemachineRoleB69CBC9E"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/waiter-state-machine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderwaiterstatemachineRoleDefaultPolicy3F969A36"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/waiter-state-machine/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderwaiterstatemachineLogGroup6DBC308B"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/CompileJobProvider/waiter-state-machine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileCompileJobProviderwaiterstatemachine7B747BA2"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/NeuronxCompile/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostNeuronxCompileEAD978A3"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/RealtimeInference/Model/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostRealtimeInferenceModelRole6BFAD415"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/RealtimeInference/Model/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostRealtimeInferenceModelRoleDefaultPolicy656E733A"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/RealtimeInference/Model/Model": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostRealtimeInferenceModelB9F36077"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/RealtimeInference/CodeDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostRealtimeInferenceCodeDeploymentAwsCliLayer3BF7416E"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/RealtimeInference/CodeDeployment/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostRealtimeInferenceCodeDeploymentCustomResource4AFEC5FB"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/RealtimeInference/EndpointConfig/EndpointConfig": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostRealtimeInferenceEndpointConfigD978F716"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/LowCost/RealtimeInference/Endpoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LowCostRealtimeInferenceEndpointB633657E"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/SingletonLambda08c9850a6f134ed49e2d7888d7b5a258/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda08c9850a6f134ed49e2d7888d7b5a258ServiceRole12DC7288"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/SingletonLambda08c9850a6f134ed49e2d7888d7b5a258/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda08c9850a6f134ed49e2d7888d7b5a25822148CF9"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/SingletonLambda1361f4695c924c469e115d1dbf925bac/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda1361f4695c924c469e115d1dbf925bacServiceRole90E87678"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/SingletonLambda1361f4695c924c469e115d1dbf925bac/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda1361f4695c924c469e115d1dbf925bacServiceRoleDefaultPolicy795C8F7D"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/SingletonLambda1361f4695c924c469e115d1dbf925bac/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda1361f4695c924c469e115d1dbf925bac39F17F23"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/SingletonLambdadf16dba85f77480ca6adcfdf74c3de62/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambdadf16dba85f77480ca6adcfdf74c3de62ServiceRoleE0466451"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/SingletonLambdadf16dba85f77480ca6adcfdf74c3de62/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambdadf16dba85f77480ca6adcfdf74c3de62ServiceRoleDefaultPolicy92D5204A"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/SingletonLambdadf16dba85f77480ca6adcfdf74c3de62/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambdadf16dba85f77480ca6adcfdf74c3de62246EFD86"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/LaunchTemplate/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileLaunchTemplateC8A774AB"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/MachinImage/NeuronxAmiProvider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileMachinImageNeuronxAmiProviderframeworkonEventServiceRole9502BCAC"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/MachinImage/NeuronxAmiProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileMachinImageNeuronxAmiProviderframeworkonEventServiceRoleDefaultPolicyEE176ADA"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/MachinImage/NeuronxAmiProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileMachinImageNeuronxAmiProviderframeworkonEvent326C28C1"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/MachinImage/Image.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileMachinImageImageParameterA0C8FEDF"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/MachinImage/NeuronxAmi/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileMachinImageNeuronxAmi70FBA732"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/ComputeEnvironment/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileComputeEnvironmentSecurityGroupDBAD4CA7"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/ComputeEnvironment/InstanceProfileRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileComputeEnvironmentInstanceProfileRoleA75D5A8B"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/ComputeEnvironment/InstanceProfileRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileComputeEnvironmentInstanceProfileRoleDefaultPolicyF87E8AF3"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/ComputeEnvironment/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileComputeEnvironmentInstanceProfileE9313FAB"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/ComputeEnvironment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileComputeEnvironmentA9E8DED0"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/JobQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileJobQueueFCD7639B"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/ContainerDefinition/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileContainerDefinitionExecutionRole1A765384"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/ContainerDefinition/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileContainerDefinitionExecutionRoleDefaultPolicyD0B7CCD9"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/JobDefinition/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileJobDefinitionF3E93C9D"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderframeworkonEventServiceRoleA3EE9CD9"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderframeworkonEventServiceRoleDefaultPolicyA086F8DF"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderframeworkonEvent60C3DD85"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/framework-isComplete/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderframeworkisCompleteServiceRole61BC74E3"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/framework-isComplete/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderframeworkisCompleteServiceRoleDefaultPolicy0AA16E45"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderframeworkisComplete1CDC8724"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/framework-onTimeout/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderframeworkonTimeoutServiceRole28B07136"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderframeworkonTimeoutServiceRoleDefaultPolicy2F6CD114"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/framework-onTimeout/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderframeworkonTimeoutF592D403"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/waiter-state-machine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderwaiterstatemachineRole980BD9C4"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/waiter-state-machine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderwaiterstatemachineRoleDefaultPolicyE43D8D3C"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/waiter-state-machine/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderwaiterstatemachineLogGroupBEC6CFFA"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/CompileJobProvider/waiter-state-machine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileCompileJobProviderwaiterstatemachine5615BD6C"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/NeuronxCompile/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceNeuronxCompileBA954C77"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/RealtimeInference/Model/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceRealtimeInferenceModelRole0289ECF8"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/RealtimeInference/Model/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceRealtimeInferenceModelRoleDefaultPolicy877786AF"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/RealtimeInference/Model/Model": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceRealtimeInferenceModel039D31D5"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/RealtimeInference/CodeDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceRealtimeInferenceCodeDeploymentAwsCliLayer982D5CC9"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/RealtimeInference/CodeDeployment/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceRealtimeInferenceCodeDeploymentCustomResource1C65D8BA"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/RealtimeInference/EndpointConfig/EndpointConfig": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceRealtimeInferenceEndpointConfig939F817F"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/HighPerformance/RealtimeInference/Endpoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighPerformanceRealtimeInferenceEndpointA439BE64"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Exports/Output{\"Fn::GetAtt\":[\"LowCostRealtimeInferenceEndpointB633657E\",\"EndpointName\"]}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputFnGetAttLowCostRealtimeInferenceEndpointB633657EEndpointNameF69CA255"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/Exports/Output{\"Fn::GetAtt\":[\"HighPerformanceRealtimeInferenceEndpointA439BE64\",\"EndpointName\"]}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputFnGetAttHighPerformanceRealtimeInferenceEndpointA439BE64EndpointNameA774AA1E"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/IntegCalm3Chat22bSageMakerRealtimeInferenceStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "IntegCalm3Chat22bSageMakerRealtimeInferenceStack"
+    },
+    "IntegTestDefaultTestDeployAssertE3E7D2A4.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "IntegTestDefaultTestDeployAssertE3E7D2A4.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "IntegTestDefaultTestDeployAssertE3E7D2A4": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "IntegTestDefaultTestDeployAssertE3E7D2A4.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b937a8a1b21210bbede9424378bb58a259f0be8407ac507665ec4ec62687fde5.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "IntegTestDefaultTestDeployAssertE3E7D2A4.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "IntegCalm3Chat22bSageMakerRealtimeInferenceStack",
+        "IntegTestDefaultTestDeployAssertE3E7D2A4.assets"
+      ],
+      "metadata": {
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpointb498fb82059001ea029a4cf6455fa771/Default/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallawssdkclientsagemakerruntimeInvokeEndpointb498fb82059001ea029a4cf6455fa771"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpointb498fb82059001ea029a4cf6455fa771/WaitFor/IsCompleteProvider/Invoke": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallawssdkclientsagemakerruntimeInvokeEndpointb498fb82059001ea029a4cf6455fa771WaitForIsCompleteProviderInvokeF527F6AF"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpointb498fb82059001ea029a4cf6455fa771/WaitFor/TimeoutProvider/Invoke": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallawssdkclientsagemakerruntimeInvokeEndpointb498fb82059001ea029a4cf6455fa771WaitForTimeoutProviderInvoke00B388AD"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpointb498fb82059001ea029a4cf6455fa771/WaitFor/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallawssdkclientsagemakerruntimeInvokeEndpointb498fb82059001ea029a4cf6455fa771WaitForRole2BE2B6BF"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpointb498fb82059001ea029a4cf6455fa771/WaitFor/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallawssdkclientsagemakerruntimeInvokeEndpointb498fb82059001ea029a4cf6455fa771WaitFor7E84781F"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpointb498fb82059001ea029a4cf6455fa771/AssertionResults": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssertionResultsAwsApiCallawssdkclientsagemakerruntimeInvokeEndpointb498fb82059001ea029a4cf6455fa771"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/SingletonFunction1488541a7b23466481b69b4408076b81/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonFunction1488541a7b23466481b69b4408076b81Role37ABCE73"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/SingletonFunction1488541a7b23466481b69b4408076b81/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonFunction1488541a7b23466481b69b4408076b81HandlerCD40AE9F"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/LatestNodeRuntimeMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LatestNodeRuntimeMap"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/SingletonFunction76b3e830a873425f8453eddd85c86925/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonFunction76b3e830a873425f8453eddd85c86925Role918961BB"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/SingletonFunction76b3e830a873425f8453eddd85c86925/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonFunction76b3e830a873425f8453eddd85c86925Handler81461ECE"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/SingletonFunction5c1898e096fb4e3e95d5f6c67f3ce41a/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonFunction5c1898e096fb4e3e95d5f6c67f3ce41aRoleB84BD8CE"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/SingletonFunction5c1898e096fb4e3e95d5f6c67f3ce41a/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonFunction5c1898e096fb4e3e95d5f6c67f3ce41aHandlerADF3E6EA"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460e/Default/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallawssdkclientsagemakerruntimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460e"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460e/WaitFor/IsCompleteProvider/Invoke": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallawssdkclientsagemakerruntimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460eWaitForIsCompleteProviderInvokeD40E57E0"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460e/WaitFor/TimeoutProvider/Invoke": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallawssdkclientsagemakerruntimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460eWaitForTimeoutProviderInvoke2696B9E5"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460e/WaitFor/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallawssdkclientsagemakerruntimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460eWaitForRoleA019CE47"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460e/WaitFor/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallawssdkclientsagemakerruntimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460eWaitForD732B10E"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/AwsApiCall@aws-sdk--client-sagemaker-runtimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460e/AssertionResults": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssertionResultsAwsApiCallawssdkclientsagemakerruntimeInvokeEndpoint06bb27b272b5c6b352ff46bdfbfc460e"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/IntegTest/DefaultTest/DeployAssert/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "IntegTest/DefaultTest/DeployAssert"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

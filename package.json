@@ -1,8 +1,9 @@
 {
-  "name": "neuronx-construct-collections",
+  "name": "aws-cdk-neuronx-models",
+  "description": "A collection that optimizes inference environment of Neuronx for each model",
   "repository": {
     "type": "git",
-    "url": "https://github.com/49480575+WinterYukky/neuronx-construct-collections.git"
+    "url": "https://github.com/WinterYukky/aws-cdk-neuronx-models.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -14,6 +15,8 @@
     "docgen": "npx projen docgen",
     "eject": "npx projen eject",
     "eslint": "npx projen eslint",
+    "integ": "npx projen integ",
+    "integ:update": "npx projen integ:update",
     "package": "npx projen package",
     "package-all": "npx projen package-all",
     "package:js": "npx projen package:js",
@@ -34,15 +37,20 @@
     "organization": false
   },
   "devDependencies": {
+    "@aws-cdk/integ-runner": "2.151.0-alpha.0",
+    "@aws-cdk/integ-tests-alpha": "2.151.0-alpha.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^7",
     "@typescript-eslint/parser": "^7",
-    "aws-cdk-lib": "2.1.0",
+    "aws-cdk-lib": "2.151.0",
+    "aws-cdk-neuronx-patterns": "0.0.10",
     "constructs": "10.0.5",
     "eslint": "^8",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.2.1",
     "jest": "^29.7.0",
     "jest-junit": "^15",
     "jsii": "~5.4.0",
@@ -50,6 +58,7 @@
     "jsii-docgen": "^10.4.20",
     "jsii-pacmak": "^1.102.0",
     "jsii-rosetta": "~5.4.0",
+    "prettier": "^3.3.3",
     "projen": "^0.85.0",
     "standard-version": "^9",
     "ts-jest": "^29.2.4",
@@ -57,11 +66,17 @@
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.1.0",
+    "aws-cdk-lib": "^2.151.0",
+    "aws-cdk-neuronx-patterns": "0.0.10",
     "constructs": "^10.0.5"
   },
+  "dependencies": {
+    "aws-cdk-neuronx-patterns": "0.0.10"
+  },
   "keywords": [
-    "cdk"
+    "cdk",
+    "neuronx",
+    "sagemaker"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
